@@ -15,7 +15,7 @@ public class UserService {
 
     public UserModel getUser(UserModel user) {
 
-        user = userDao.getProduct(user);
+        user = userDao.getUser(user);
 
         return user;
     }
