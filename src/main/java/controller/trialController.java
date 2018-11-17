@@ -24,13 +24,12 @@ public class trialController extends HttpServlet {
         String firstname = req.getParameter("firstname");
         String lastname = req.getParameter("lastname");
         UserModel user = new UserModel();
-
-        UserService users = new UserService();
         user.setUsername(username);
         user.setPassword(password);
         user.setFirstname(firstname);
         user.setLastname(lastname);
-        users.createUser(user);
+        UserService userService = new UserService();
+        userService.createUser(user);
 
 
 
